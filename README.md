@@ -14,7 +14,7 @@ Run the application directly in Intellij as springboot application or by enterin
 Testing :
 This project has junit tests written. We can create a jenkins build to run the tests when we are about to merge the story to the master.
 
-Packagin Layout
+# Packagin Layout
 - src/main
   - java
     - com/test
