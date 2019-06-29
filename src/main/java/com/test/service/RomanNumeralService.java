@@ -18,10 +18,11 @@ public class RomanNumeralService {
   public RomanResponse calculateRomanNumeral(int num) {
 
     String romanVal = intToRoman(num);
-      if(num<0) {
-        throw new NumberFormatException("Number to convert roman numeral must be greater than 0");
-      }
-      return RomanResponse.builder().romanVal(romanVal).build();
+    if(num<0) {
+      logger.error("Number to convert roman numeral must be greater than 0");
+      throw new NumberFormatException("Number to convert roman numeral must be greater than 0");
+    }
+    return RomanResponse.builder().romanVal(romanVal).build();
   }
 
   /**
