@@ -1,11 +1,9 @@
 package com.test.service;
 
-import com.test.controller.RomanNumeralController;
 import com.test.domain.RomanResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.HttpClientErrorException;
 
 @Service
 public class RomanNumeralService {
@@ -21,7 +19,7 @@ public class RomanNumeralService {
 
     String romanVal = intToRoman(num);
       if(num<0) {
-        throw new NumberFormatException("Value of RomanNumeral must be positive.");
+        throw new NumberFormatException("Number to convert roman numeral must be greater than 0");
       }
       return RomanResponse.builder().romanVal(romanVal).build();
   }

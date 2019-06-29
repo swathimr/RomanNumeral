@@ -36,6 +36,7 @@ public class RomanNumeralController {
     try {
       return romanNumeralService.calculateRomanNumeral(query);
     } catch (Exception excep) {
+      logger.error("Unable to convert integer to roman numeral",excep);
       throw new ResponseStatusException(HttpStatus.BAD_REQUEST,excep.getMessage());
     }
   }
