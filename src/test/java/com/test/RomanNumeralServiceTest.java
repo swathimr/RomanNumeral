@@ -22,6 +22,11 @@ public class RomanNumeralServiceTest {
     romanNumeralService.calculateRomanNumeral(-1);
   }
 
+  @Test(expected = NumberFormatException.class)
+  public void testZero() {
+    romanNumeralService.calculateRomanNumeral(0);
+  }
+
   @Test
   public void getRomanConversion399() {
     String actual = romanNumeralService.calculateRomanNumeral(399).getRomanVal();

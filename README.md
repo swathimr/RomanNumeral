@@ -8,10 +8,10 @@ Springboot, JAVA 1.8, Gradle, Junit, Lombok
 
 ### Run application
 
-Once cloned, run gradle clean install. 
+Once cloned, run gradle clean build install. This will install the dependencies from the build.gradle.
 
-Api can be run in two ways
-1. Run the application directly in Intellij as springboot application by right clicking the Application.java-> Run as Springboot Application
+Run the service in either of the ways below,
+1. Run the application directly in Intellij/Eclipse as springboot application by right clicking the Application.java-> Run as Springboot Application
 2. Execute command "gradle bootrun" command
 
 Testing :
